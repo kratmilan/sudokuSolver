@@ -1,0 +1,142 @@
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 40px 0 20px 0;
+  color: #2d3a4b;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #b0c4de;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #2d3a4b;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+  padding: 8px;
+}
+
+.line {
+  display: flex;
+}
+
+.numberInput {
+  width: 48px;
+  height: 48px;
+  margin: 2px;
+  background-color: #f8fafc;
+  border: 2px solid #b0c4de;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #2d3a4b;
+  transition: background 0.2s, border 0.2s;
+  outline: none;
+}
+
+.numberInput:focus {
+  background-color: #e0eafc;
+  border-color: #5b9bd5;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.line:nth-child(3),
+.line:nth-child(6) {
+  border-bottom: 2px solid #5b9bd5;
+}
+
+.numberInput:nth-child(3),
+.numberInput:nth-child(6) {
+  border-right: 2px solid #5b9bd5;
+}
+
+.buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+button.solve,
+button.example {
+  background: linear-gradient(90deg, #5b9bd5 0%, #4a90e2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  transition: background 0.2s, transform 0.2s;
+  margin-right: 20px;
+}
+
+button.solve:hover,
+button.example:hover {
+  background: linear-gradient(90deg, #4a90e2 0%, #5b9bd5 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.numberInput.given {
+  color: #1976d2;
+  background-color: #e3f0fc;
+  font-weight: bold;
+  border-color: #1976d2;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#quickSolve {
+  accent-color: #5b9bd5;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: 2px solid #5b9bd5;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.checkbox label {
+  font-size: 1.1rem;
+  color: #2d3a4b;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+#quickSolve:checked + label {
+  color: #1976d2;
+  font-weight: bold;
+}
